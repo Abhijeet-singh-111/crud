@@ -1,0 +1,87 @@
+.head-btns-div{
+    margin: 18px;
+}
+
+.head-btns-div ul{
+    padding: 0;
+    list-style: none;
+}
+
+.head-btns-div ul li{
+    display: inline-block;
+}
+
+.head-btns-div ul li a{
+    padding: 12px 23px;
+}
+
+.furn-form, .categ-view-all{
+    padding: 35px;
+    margin: 10px;
+    border: 1px solid #5856ce;
+}
+
+.furn-form h1, .categ-view-all h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn-custom{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #8effa1;
+    padding: 14px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.error{
+    color: red;
+}
+
+.add-btn{
+    position: relative;
+}
+
+.add-btn a{
+    position: absolute;
+    right: 18px;
+    top: -43px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #70ff7e;
+    color: #000;
+}
+
+.add-btn a:hover{
+    background-color: #00ffdd;
+}
+
+.controle-btns a{
+    padding: 6px 11px;
+    text-decoration: none;
+    margin: 0 1px;
+    color: #000;
+}
+
+.controle-btns a.edit-btn{
+  background-color: #66b5ff;
+}
+
+.controle-btns a.edit-btn:hover{
+    background-color: #3faafc;
+}
+
+.controle-btns a.delete-btn{
+    background-color: #ff4747;
+}
+
+.controle-btns a.delete-btn:hover{
+    background-color: #ff2121;
+}
+
+.exsisting-image img{
+    width: 100%;
+}
