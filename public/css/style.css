@@ -73,6 +73,29 @@
     background-color: #44a0fc;
 }
 
+.logout-btn{
+    width: 67%;
+    position: relative;
+}
+
+.logout-btn form{
+    position: absolute;
+    right: 0;
+}
+
+.logout-btn form button{
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    background-color: #ff7459;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.logout-btn form button:hover{
+    background-color: #ff2121;
+}
+
 .furn-form, .categ-view-all{
     padding: 35px;
     margin: 10px;

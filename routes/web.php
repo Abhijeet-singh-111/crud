@@ -6,6 +6,7 @@ use App\Http\Controllers\SubcateContorller;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\Auth\SignupController;
 use App\Http\Controllers\Auth\LoginController;
+use auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,8 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-// Route::view('/', 'index');
+Route::group(['middleware'=>'auth'],function(){
+
 Route::get('/list-categorie',[CategoriesController::class,'index']);
 Route::get('/add-categorie',[CategoriesController::class,'addcate']);
 Route::post('/add-categorie',[CategoriesController::class,'postform']);
@@ -39,8 +41,14 @@ Route::get('/edit-item/{id}',[ItemsController::class,'edit']);
 Route::post('/edit-item/{id}',[ItemsController::class,'update']);
 Route::get('/delete-item/{id}',[ItemsController::class,'destroy']);
 
+});
+
 Route::get('/',[SignupController::class,'index']);
 Route::post('/',[SignupController::class,'store']);
 
-Route::get('/login',[LoginController::class,'index']);
-Route::post('/login',[LoginController::class,'AuthUser']);
+Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::post('/login',[LoginController::class,'AuthUser'])->name('login');
+
+Route::post('/logout',[LoginController::class, 'Logout']);
+
+

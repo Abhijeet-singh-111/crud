@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    @unless(Auth::check())
+    @unless(Auth::check() == false)
     @include("layout.header")
     @endunless
 <div class='container'>
