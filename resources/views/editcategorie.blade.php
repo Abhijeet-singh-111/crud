@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
             <label for="Itemcode">Enter New Categorie</label>
-            <input type="text" class="form-control" id='item-code' name='main-categ' value='{{$data->name}}' />
+            <input type="text" class="form-control" id='item-code' name='maincateg' value='{{$data->name}}' />
         </div>
 
         <div class='form-group'>

@@ -14,9 +14,9 @@
 
 </head>
 <body>
-
+    @unless(Auth::check())
     @include("layout.header")
-
+    @endunless
 <div class='container'>
     @include('layout.messages')
     @yield('content')

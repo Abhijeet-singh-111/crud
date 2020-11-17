@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\Subcatecontorller;
-use App\Http\Controllers\Itemscontroller;
+use App\Http\Controllers\SubcateContorller;
+use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\Auth\SignupController;
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,23 +18,29 @@ use App\Http\Controllers\Itemscontroller;
 */
 
 // Route::view('/', 'index');
-Route::get('/',[CategoriesController::class,'index']);
+Route::get('/list-categorie',[CategoriesController::class,'index']);
 Route::get('/add-categorie',[CategoriesController::class,'addcate']);
 Route::post('/add-categorie',[CategoriesController::class,'postform']);
 Route::get('/edit-categorie/{id}',[CategoriesController::class,'formeditview']);
 Route::post('/edit-categorie/{id}',[CategoriesController::class,'formedit']);
 Route::get('/delete-categorie/{id}',[CategoriesController::class,'formdelete']);
 
-Route::get('/list-subcategorie',[Subcatecontorller::class,'index']);
-Route::get('/add-subcategorie',[Subcatecontorller::class,'addsubcate']);
-Route::post('/add-subcategorie',[Subcatecontorller::class,'postform']);
-Route::get('/edit-subcategorie/{id}',[Subcatecontorller::class,'formeditview']);
-Route::post('/edit-subcategorie/{id}',[Subcatecontorller::class,'formedit']);
-Route::get('/delete-subcategorie/{id}',[Subcatecontorller::class,'formdelete']);
+Route::get('/list-subcategorie',[SubcateContorller::class,'index']);
+Route::get('/add-subcategorie',[SubcateContorller::class,'addsubcate']);
+Route::post('/add-subcategorie',[SubcateContorller::class,'postform']);
+Route::get('/edit-subcategorie/{id}',[SubcateContorller::class,'formeditview']);
+Route::post('/edit-subcategorie/{id}',[SubcateContorller::class,'formedit']);
+Route::get('/delete-subcategorie/{id}',[SubcateContorller::class,'formdelete']);
 
-Route::get('/list-items',[Itemscontroller::class,'index']);
-Route::get('/add-item',[Itemscontroller::class,'create']);
-Route::post('/add-item',[Itemscontroller::class,'store']);
-Route::get('/edit-item/{id}',[Itemscontroller::class,'edit']);
-Route::post('/edit-item/{id}',[Itemscontroller::class,'update']);
-Route::get('/delete-item/{id}',[Itemscontroller::class,'destroy']);
+Route::get('/list-items',[ItemsController::class,'index']);
+Route::get('/add-item',[ItemsController::class,'create']);
+Route::post('/add-item',[ItemsController::class,'store']);
+Route::get('/edit-item/{id}',[ItemsController::class,'edit']);
+Route::post('/edit-item/{id}',[ItemsController::class,'update']);
+Route::get('/delete-item/{id}',[ItemsController::class,'destroy']);
+
+Route::get('/',[SignupController::class,'index']);
+Route::post('/',[SignupController::class,'store']);
+
+Route::get('/login',[LoginController::class,'index']);
+Route::post('/login',[LoginController::class,'AuthUser']);

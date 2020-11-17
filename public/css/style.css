@@ -15,6 +15,64 @@
     padding: 12px 23px;
 }
 
+.signup-main-div{
+    width: 40%;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid #5856ce;
+}
+
+.signup-main-div h1{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.ordiv{
+    position: relative;
+    color: #000;
+    text-align: center;
+}
+
+.ordiv::before, .ordiv::after{
+    position: absolute;
+    content: '';
+    top: 9px;
+    background-color: #000;
+    height: 3px;
+    width: 10%;
+
+}
+
+.ordiv::before{
+    left: 34%;
+}
+
+.ordiv::after{
+    right: 34%;
+}
+
+.button-login{
+    text-align: center;
+}
+
+.btn-login{
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    background-color: #4cb1ff;
+    padding: 14px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-login:hover{
+    color: #000;
+    text-decoration: none;
+    background-color: #44a0fc;
+}
+
 .furn-form, .categ-view-all{
     padding: 35px;
     margin: 10px;
@@ -35,6 +93,7 @@
     margin-top: 15px;
     font-size: 20px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .error{
